@@ -8,8 +8,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/client/index.html');
 })
 
-
-//Declaration of static files (CSS) to use
 app.use(express.static(path.resolve(__dirname, "client")));
 
 
