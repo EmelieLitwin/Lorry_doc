@@ -5,13 +5,16 @@ const server = http.createServer(app);
 const path = require("path");
 const mysql = require('mysql');
 
+// Present root file
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/client/index.html');
 })
 
+// Path to client folder
 app.use(express.static(path.resolve(__dirname, "client")));
 
 
+// Server connection
 server.listen(
     process.env.PORT || 3000,
     function () {
@@ -22,6 +25,8 @@ server.listen(
     }
 );
 
+
+// Database connection
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -34,7 +39,29 @@ con.connect (function(err) {
     console.log("Connected!");
 });
 
-con.query("SELECT *FROM Symptoms", function (err, result, fields) {
-    if (err) throw err;
-    console.log(result);
+
+// Endpoint for fetched data
+app.get('/getdata', (req, res) => {
+    // MySQL query
+    var queryString = "SELECT Description FROM Symptoms2";
+
+    con.query(queryString, function (err, rows, fields) {
+        if (err) throw err;
+        else {
+            var result = [];
+
+            // Loop query results
+            rows.forEach(function(entry) {
+
+                // Focus on the row data, push onto previously empty array
+                result.push(entry.Description);
+                console.log(entry.Description);
+            });
+
+            // Respond with JSON result
+            res.json(result);
+            console.log(result);
+        }
+    });
+        
 });
