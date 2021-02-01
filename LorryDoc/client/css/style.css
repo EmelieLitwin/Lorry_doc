@@ -1,3 +1,7 @@
-#symptoms2, #symptoms3 {
+#symptoms2, #symptoms3, #solution, #solution-description, #mechanic {
     display: none;
+}
+
+.mechanic-info {
+    margin: 0;
 }
