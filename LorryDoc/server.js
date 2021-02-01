@@ -48,19 +48,19 @@ app.get('/getdata', (req, res) => {
     con.query(queryString, function (err, rows, fields) {
         if (err) throw err;
         else {
-            var result = [];
+            var symptoms2Table = [];
 
             // Loop query results
             rows.forEach(function(entry) {
 
                 // Focus on the row data, push onto previously empty array
-                result.push(entry.Description);
+                symptoms2Table.push(entry.Description);
                 console.log(entry.Description);
             });
 
             // Respond with JSON result
-            res.json(result);
-            console.log(result);
+            res.json(symptoms2Table);
+            console.log(symptoms2Table);
         }
     });
         
