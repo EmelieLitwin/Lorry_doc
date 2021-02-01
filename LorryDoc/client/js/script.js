@@ -20,25 +20,25 @@ success: function(symptoms2Table){
         var smokeBtn = document.createElement('button');
         smokeBtn.innerHTML = symptoms2Table[0];
         smokeBtn.setAttribute('id', 'smokeBtn');
-        smokeBtn.setAttribute('class', 'rounded w3-button w3-blue w3-padding-large m-2');
+        smokeBtn.setAttribute('class', 'btns');
         smokeBtn.style.display = "block";
 
         var leakBtn = document.createElement('button');
         leakBtn.innerHTML = symptoms2Table[1];
         leakBtn.setAttribute('id', 'leakBtn');
-        leakBtn.setAttribute('class', 'rounded w3-button w3-blue w3-padding-large m-2');
+        leakBtn.setAttribute('class', 'btns');
         leakBtn.style.display = "block";
 
         var tireBtn = document.createElement('button');
         tireBtn.innerHTML = symptoms2Table[2];
         tireBtn.setAttribute('id', 'tireBtn');
-        tireBtn.setAttribute('class', 'rounded w3-button w3-blue w3-padding-large m-2');
+        tireBtn.setAttribute('class', 'btns');
         tireBtn.style.display = "block";
 
         var warningBtn = document.createElement('button');
         warningBtn.innerHTML = symptoms2Table[3];
         warningBtn.setAttribute('id', 'warningBtn');
-        warningBtn.setAttribute('class', 'rounded w3-button w3-blue w3-padding-large m-2');
+        warningBtn.setAttribute('class', 'btns');
         warningBtn.style.display = "block";
 
         // Append newly created buttons to div
@@ -74,13 +74,13 @@ success: function(symptoms2Table){
                 var engineBtn = document.createElement('button');
                 engineBtn.innerHTML = symptoms3Table[0];
                 engineBtn.setAttribute('id', 'engineBtn');
-                engineBtn.setAttribute('class', 'rounded w3-button w3-blue w3-padding-large m-2');
+                engineBtn.setAttribute('class', 'btns');
                 engineBtn.style.display = "block";
 
                 var exhaustBtn = document.createElement('button');
                 exhaustBtn.innerHTML = symptoms3Table[1];
                 exhaustBtn.setAttribute('id', 'exhaustBtn');
-                exhaustBtn.setAttribute('class', 'rounded w3-button w3-blue w3-padding-large m-2');
+                exhaustBtn.setAttribute('class', 'btns');
                 exhaustBtn.style.display = "block";
 
 
