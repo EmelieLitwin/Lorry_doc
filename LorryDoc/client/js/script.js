@@ -93,7 +93,7 @@ $.ajax({
 
                                             var resolutionDescription = document.createElement("p");
                                             var resolution = document.createElement("h5");
-                                            resolution.innerHTML = i + 1 + '. ' + resolutionArr[i].suggestion;
+                                            resolution.innerHTML = resolutionArr[i].suggestion;
                                             resolution.setAttribute('class', 'card-title')
                                             resolutionDescription.innerHTML = resolutionArr[i].description;
                                             resolutionDescription.setAttribute('class', 'card-text')
