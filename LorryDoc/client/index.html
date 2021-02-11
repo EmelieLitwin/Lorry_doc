@@ -1,62 +1,54 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
-<title>Lorry Doc</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link type="text/css" rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/style.css">
+<head>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <title>Lorry Doc</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
 </head>
 <body>
-    
-   
-  <!-- Navbar -->
-    <div class="w3-top">
-        <nav class="navbar navbar-expand-lg bg-light"></nav>
-        <div class="w3-col w3-bar w3-indigo w3-card w3-center-align w3-large">
-            <div class="container-fluid"></div>
-            <h2 class="w3-padding-large">Lorry Doc</h2>
+
+    <div>
+        <div class="navHead w3-col w3-bar w3-card w3-center-align w3-large w3-padding-large">
+            <div class='section-head'><i class="bi bi-chevron-left"onclick="history.go()"></i><h3>Troubleshooting</h3></div>
         </div>
     </div>
+    <div class="container">
+        <div id="symptoms" class="w3-container ">
+            <h4>Describe the symptoms:</h4>
+            <div class='section-row'><button class="btns">I feel it</button><label class="pl-3 "> Hesitation, shimmy, vibration or a pull</label></div>
+            <div class='section-row'><button class="btns">I hear it</button><label class="pl-3">A rattle, a knock, or a squeal</label></div>
+            <div class='section-row'><button class="btns" id="btn-see">I see it</button><label class="pl-3">Oil leak, warning light or smoke</label></div>
+            <div class='section-row'> <button class="btns">I smell it</button><label class="pl-3">Gasoline, rotten eggs or burning oil</label></div>
+            <div class='section-row'> <button class="btns">Won't start</button><label class="pl-3">It just won't start</label></div>
+        </div>
 
-    <!-- Header -->
-    <div id="symptoms" class="w3-container " style="padding:100px 16px">
-        <h1 class="w3-xlarge">What is the problem?</h1>
-        <p class="w3-large ">Start by describing the symtoms:</p>
-        <button class="rounded w3-button w3-blue w3-padding-large m-2">Feel </button><label class="pl-3 ">I feel it (i.e. hesitation, shimmy, vibration or a pull)</label><br />
-        <button class="rounded w3-button w3-blue w3-padding-medium m-2">Hear </button><label class="pl-3">I hear it (i.e. a rattle, a knock, or a squeal)</label><br />
-        <button class="rounded w3-button w3-blue w3-padding-medium m-2" id="btn-see">See</button><label class="pl-3">I see it (i.e. oil leak, warning light, or smoke)</label><br />
-        <button class="rounded w3-button w3-blue w3-padding-medium m-2">Smell</button><label class="pl-3">I smell it (i.e. gasoline, rotten eggs, or burning oil)</label><br />
-        <button class="rounded w3-button w3-blue w3-padding-medium m-2">Won't start</button><label class="pl-3">It just won't start (It just won't start)</label><br />
-    </div>
+        <!--SYMPTOMS2-->
+        <div id="symptoms2" div class="w3-container">
+            <h4>What can you see?</h4>
+        </div>
 
-    <!--SYMPTOMS2-->
-    <div id="symptoms2" div class="w3-container " style="padding:100px 16px">
-        <h1 class="w3-xlarge">What can you see?</h1>
-    </div>
+        <!--SYMPTOMS3-->
+        <div id="symptoms3" div class="w3-container ">
+            <h4>Where is the smoke coming from?</h4>
+        </div>
 
-    <!--SYMPTOMS3-->
-    <div id="symptoms3" div class="w3-container " style="padding:100px 16px">
-        <h1 class="w3-xlarge">Where is the smoke coming from?</h1>
-    </div>
 
-    
         <!--SOLUTION-->
-    <div div class="w3-container " style="padding:100px 16px">
-        <div id="solution" class="card text-center" style="padding:20px 16px">
-            <div class="card-header">
-              Suggestion
+        <div div class="w3-container ">
+            <div id="solution" class="card text-center" style="padding:20px 16px">
+                <div class="card-header">
+                    Suggestions
+                </div>
+                <div id="solution-description" class="card-body">
+                </div>
+
             </div>
-            <div id="solution-description" class="card-body">
-              <h5 class="card-title">Over-Heated Engine</h5>
-            </div>
-              
-        </div>
             <div id="mechanic" class="card-footer text-muted">
                 <p class="fst-italic">Still Unsure? Here's a contact information to the closest Mechanic.</p>
                 <p class="mechanic-info">Earls Work Shop</p>
@@ -65,11 +57,12 @@
                 <p class="mechanic-info">123 888 Nowhere</p>
             </div>
         </div>
-        
-          <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-          <script src="../server.js"></script>
-          <script src="js/script.js"></script>
-    
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="../server.js"></script>
+    <script src="js/script.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
