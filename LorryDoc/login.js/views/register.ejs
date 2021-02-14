@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="http://localhost:3000/css/style.css">
+<body class="start">
+<h1><p>Register</p></h1>
+<form action="/register" method="POST">
+  <div>
+    <label class="login" for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div>
+    <label class="login" for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  <div>
+    <label class="login" for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+  </div>
+  <button class="btns" type="submit">Register</button>
+</form>
+<br>
+<p>
+  <a class="btns" href="/login">Login</a>
+</p>
+</body>
