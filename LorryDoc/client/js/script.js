@@ -6,14 +6,19 @@ $.ajax({
     url: "http://localhost:3000/getdata",
     crossDomain: true,
     success: function (symptoms2Table) {
+
         // Get selected div for later placement
         var symptoms2List = document.getElementById('symptoms2');
+
         // Get element "See" button
         var seeBtn = document.getElementById('btn-see');
+
         // Add eventListener to "See" button
         seeBtn.addEventListener('click', function () {
+
             //Creates an array with IDs for button elements
             let idArray = ['smokeBtn', 'leakBtn', 'tireBtn', 'warningBtn']
+            
             //Looping through table to create a button for every symptom that matches previous choice (3=see)
             for (var i = 0; i < symptoms2Table.length; i++) {
                 if (symptoms2Table[i].symptoms_id == '3') {

@@ -30,7 +30,7 @@ server.listen(
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "1234",
+    password: "123456789",
     database: "LorryDoc_database"
 });
 
@@ -59,8 +59,7 @@ app.get('/getdata', (req, res) => {
 
             // Respond with JSON result
             res.json(symptoms2Table);
-            console.log('symptom2');
-            console.log(symptoms2Table);
+            
         }
     });
         
@@ -86,8 +85,7 @@ app.get('/getnextdata', (req, res) => {
 
             // Respond with JSON result
             res.json(symptoms3Table);
-            console.log('symptom3  ')
-            console.log(symptoms3Table);
+            
         }
     });
         
@@ -112,8 +110,7 @@ app.get('/getlastdata', (req, res) => {
 
             // Respond with JSON result
             res.json(resolution);
-            console.log('resolution ')
-            console.log(resolution);
+           
         }
     });
         
